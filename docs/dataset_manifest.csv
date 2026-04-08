@@ -1,0 +1,9 @@
+dataset_id,file_name,purpose,source_type,source_origin,rows,columns,target_variable,notes
+A,dataset_A_python_warmup.csv,Python warm-up: variables / filtering / grouping / plots,synthetic,build_datasets.py (seed=42),50,8,,Fully synthetic tiny finance table
+B,dataset_B_descriptive_stats_eda.csv,Descriptive statistics and EDA,adapted,Facturas_empresa_update202504.csv,45,10,,Translated from Spanish; 3 missing values introduced for EDA. An extended version (dataset_B_descriptive_stats_eda_extended.csv) may be created later if Notebook 03 needs richer EDA visuals
+C,dataset_C_bank_attrition_core.csv,Core modelling: logistic regression / trees / XGBoost / validation,adapted+enriched,Churn_Modelling.csv (Kaggle),10000,14,attrition_flag,12 original columns + 2 derived teaching features (digital_usage_proxy and complaints_last_6m) created for classroom use
+D,dataset_D_unsupervised_extension.csv,PCA and clustering exercises,derived,Derived from Dataset C,10000,8,,Numeric features only — no target or identifier
+E,dataset_E_time_awareness.csv,Temporal awareness: trends / splits / leakage,adapted,Ventas_inversion_update202504.csv,46,4,,Translated headers; ISO date added
+F,dataset_F_deep_learning_awareness.csv,Neural network comparison demo,derived,Stratified sample from Dataset C,2000,14,attrition_flag,Same schema as C — reduced for fast training
+G,dataset_G_finance_headlines_sentiment.csv,Optional sentiment analysis,curated,reddit_wsb.csv (Reddit r/wallstreetbets),144,6,sentiment_label,Rule-based sentiment labels — teaching dataset only
+H,dataset_H_financial_product_baskets.csv,Association rules / Apriori for cross-sell in retail finance,synthetic,build_compact_notebooks_v5.py (seed=42),250,12,,Small synthetic product-holdings matrix for Apriori and support/confidence/lift

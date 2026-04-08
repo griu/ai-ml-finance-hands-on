@@ -205,3 +205,6 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+docs/Theory_contents.md
+notebooks_exec/*
+notebooks_solved/*

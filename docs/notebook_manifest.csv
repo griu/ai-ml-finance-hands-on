@@ -1,0 +1,18 @@
+notebook_file,group,session,topic,main_dataset,estimated_duration_minutes,core_or_optional,status
+01_python_setup_and_first_steps.ipynb,Core Session 1,Session 1 (8 Apr),Topic 1 — Python,Dataset A (tiny inline),30,core,done — stabilised
+02_python_warmup_for_finance_students.ipynb,Core Session 1,Session 1 (8 Apr),Topic 1 — Python,Dataset A,90,core,done — stabilised
+03_descriptive_statistics_and_eda_for_finance.ipynb,Core Session 2,Session 1–2 bridge,Topic 2 — Data & EDA,Dataset B,90,core,done — stabilised
+03b_official_statistics_and_api_practice_for_finance.ipynb,Core Session 1 extension,Session 1 (8 Apr) homework/demo,Topic 1 — External Data & APIs,Official statistics APIs,45,core-extension,done — wave2 revised
+04_building_the_first_modelling_table.ipynb,Core Session 2,Session 2 (15 Apr),Topic 2 — Data & Framing,Dataset C,60,core,done — stabilised
+05_linear_and_logistic_baseline_models.ipynb,Core Session 3,Session 3 (22 Apr),Topic 2 — Modelling,Dataset C,60,core,done — stabilised
+05b_decision_trees_ensembles_and_xgboost_for_tabular_finance.ipynb,Core Session 3,Session 3 (22 Apr),Topic 2 — ML Methods,Dataset C,90,core,done — stabilised
+06_validation_regularization_xgboost_and_business_interpretation.ipynb,Core Session 3,Session 3 (22 Apr),Topic 2 — Validation & Interpretation,Dataset C,90,core,done — stabilised
+06b_optional_temporal_spatial_and_unsupervised_awareness.ipynb,Optional enrichment,Self-study,Extension — Temporal & Unsupervised,Dataset E + D,45,optional,done — validated
+06c_neural_networks_and_deep_learning_awareness_for_finance_students.ipynb,Optional enrichment,Self-study,Extension — Neural Networks,Dataset F,45,optional,done — validated
+06d_optional_kmeans_pca_and_sentiment_in_finance.ipynb,Optional enrichment,Self-study,Extension — Clustering & Sentiment,Dataset D + G,45,optional,done — validated
+04a_data_structures_for_finance.ipynb,Compact Topic 2 extension,Session 2 support,Topic 2.2.2.2 — Data structures,Dataset C (illustrative) + inline examples,35,compact-extension,done — validated
+04b_data_treatment_for_model_ready_data.ipynb,Compact Topic 2 extension,Session 2 support,Topic 2.2.2.3 — Data treatment,Dataset C (messy teaching copy),45,compact-extension,done — validated
+05c_compact_supervised_methods_nb_svm_knn.ipynb,Compact Topic 2 extension,Session 3 support,Topic 2.3.1.c — Naïve Bayes / SVM / k-NN,Dataset C,45,compact-extension,done — validated
+05d_supervised_neural_networks_with_pytorch.ipynb,Compact Topic 2 extension,Session 3 support,Topic 2.3.1.d — Neural networks within supervised ML,Dataset F,45,compact-extension,done — validated
+06e_hierarchical_clustering_and_gaussian_mixtures.ipynb,Compact Topic 2 extension,Self-study / Session 3 optional,Topic 2.3.2.b — Hierarchical clustering / Gaussian mixtures,Dataset D,45,compact-extension,done — validated
+06f_association_rules_apriori_for_finance.ipynb,Compact Topic 2 extension,Self-study / Session 3 optional,Topic 2.3.2.c — Association rules / Apriori,Dataset H,40,compact-extension,done — validated

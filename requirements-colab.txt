@@ -1,0 +1,27 @@
+# requirements-colab.txt
+# ──────────────────────────────────────────────────────────────────────────────
+# Use this file in Google Colab INSTEAD of requirements.txt.
+#
+# Colab already includes: numpy, pandas, scipy, matplotlib, seaborn,
+#   scikit-learn, xgboost, torch (with GPU), jupyter, ipykernel.
+# Only the packages below need to be installed.
+#
+# At the top of each notebook in Colab, run this cell first:
+#   !pip install -q -r requirements-colab.txt
+# Or install individually:
+#   !pip install -q shap eurostat world_bank_data
+#
+# DATA FILES — important:
+#   Colab does not have access to the local data/ folder.
+#   Upload the required CSV file(s) using the Files panel (left sidebar),
+#   then change the DATA_DIR line in each notebook to:
+#       DATA_DIR = Path('.')        # if you uploaded to the Colab root
+#   Or mount your Google Drive and point to the correct folder:
+#       from google.colab import drive
+#       drive.mount('/content/drive')
+#       DATA_DIR = Path('/content/drive/MyDrive/ai-ml-finance/data/processed')
+# ──────────────────────────────────────────────────────────────────────────────
+
+shap>=0.42
+eurostat>=1.0          # only needed for NB03b
+world_bank_data>=0.1   # only needed for NB03b
