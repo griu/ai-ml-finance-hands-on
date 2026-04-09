@@ -113,58 +113,28 @@ pip install -r requirements.txt
 python -m ipykernel install --user --name finance_ml --display-name "finance_ml"
 ```
 
-5. Open the project in VS Code:
-
-```bash
-code .
-```
-
-6. In VS Code:
+5. In VS Code:
 
 - Open a notebook from `notebooks/`
 - Select the `finance_ml` kernel when prompted
 - Run cells from top to bottom
 - Keep the terminal in the project root so relative paths work correctly
 
-7. Typical workflow:
+6. Typical workflow:
 
 - Use **Git** to clone the repository or pull updates
 - Use **Conda** to activate the correct Python environment
 - Use **VS Code + Jupyter** to open and execute the notebooks
 
-If `code .` does not work from the terminal, open VS Code manually and use **File > Open Folder...** on the repository root.
-
 ---
 
 ## Quickstart
 
-0. **Get the materials** — clone or download the repository:
-```bash
-git clone https://github.com/griu/ai-ml-finance-hands-on.git
-cd ai-ml-finance-hands-on
-```
-No Git? Download the ZIP from the green **Code** button on GitHub and extract it.
+1. Open VS Code manually and use **File > Open Folder...** on the repository root.
 
-1. Install Anaconda (see `docs/environment_setup.md`)
-2. Create the environment:
-```bash
-conda env create -f environment.yml
-conda activate finance_ml
-```
-3. Install the local pip requirements:
-```bash
-pip install -r requirements.txt
-```
-4. Kernel publication
-```bash
-python -m ipykernel install --user --name finance_ml --display-name "finance_ml"
-```
-5. Launch Jupyter **from the project root**:
-```bash
-jupyter notebook
-```
-6. Open notebooks in order starting from `notebooks/01_python_setup_and_first_steps.ipynb`
-7. Google Colab alternative:
+2. Open notebooks in order starting from `notebooks/01_python_setup_and_first_steps.ipynb`
+
+3. Google Colab alternative:
 
 - Open [colab.research.google.com](https://colab.research.google.com)
 - Choose **File > Open notebook > GitHub**
@@ -173,7 +143,10 @@ jupyter notebook
 - Execute the **first cell** before running any other cell
 - That first cell performs the Colab initialization: it detects Colab, clones the repository resources, installs `requirements-colab.txt`, and copies the `data/` folder next to the notebook so the rest of the notebook can resolve `data/processed`
 
-8. Torch, special case:
+## Neural networks and deep learning 
+
+If you want to explore them, the `requirements-colab.txt` file includes the necessary dependencies for PyTorch. If you are setting up a local environment and want to include PyTorch, follow the instructions below.
+
 ```bash
 # ── Deep learning (PyTorch) ──────────────────────────────────────────────────
 # For CPU-only install (lighter, works on all platforms):
@@ -182,7 +155,7 @@ jupyter notebook
 #   pip install torch --index-url https://download.pytorch.org/whl/cu121
 ```
 
-### Execution notes
+## Execution notes
 
 - Notebooks are designed to run **from the project root or from the `notebooks/` folder**.
   A small `pathlib` helper at the top of each data-loading notebook resolves `data/processed/`
