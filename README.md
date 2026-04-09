@@ -19,6 +19,123 @@ The materials cover:
 
 ---
 
+## Software Installation
+
+Before creating the Python environment, install these three tools:
+
+- **Visual Studio Code (VS Code)** for editing notebooks and project files
+- **Anaconda or Miniconda** for managing Python environments
+- **Git** for cloning and updating the repository
+
+### 1. VS Code
+
+**Windows**
+
+- Download and install VS Code from the official Microsoft website.
+- During installation, it is useful to enable "Add to PATH", "Open with Code" in the file explorer, and "Register Code as an editor for supported file types".
+
+**macOS (Intel or Apple Silicon / M-series)**
+
+- Download the macOS build of VS Code from the official Microsoft website.
+- Apple Silicon users should prefer the Apple Silicon build when available.
+- Move VS Code to the `Applications` folder and open it once to complete the first-run setup.
+
+**Recommended VS Code extensions for these notebooks**
+
+- `Python` by Microsoft
+- `Jupyter` by Microsoft
+- `Pylance` by Microsoft
+
+These extensions cover notebook execution, kernel selection, autocomplete, linting and variable inspection for the course workflow.
+
+### 2. Anaconda or Miniconda
+
+**Windows**
+
+- Install either **Anaconda** if you want a full scientific Python distribution, or **Miniconda** if you prefer a lighter installation.
+- Keep the default settings unless your institution has a specific policy.
+- After installation, open **Anaconda Prompt** or another terminal where `conda` is available.
+
+**macOS (Intel or Apple Silicon / M-series)**
+
+- Install the correct macOS version for your processor:
+- Intel Mac: x86_64 installer
+- Apple Silicon Mac: arm64 / Apple Silicon installer
+- Anaconda and Miniconda both work; Miniconda is usually the lighter option.
+- After installation, open a new Terminal and confirm Conda is available:
+
+```bash
+conda --version
+```
+
+### 3. Git Client
+
+**Windows**
+
+- Install **Git for Windows**.
+- The default installation options are usually appropriate for students.
+- A practical setup is to allow Git from the command line and keep Git Bash available.
+
+**macOS (Intel or Apple Silicon / M-series)**
+
+- Install Git using Apple Command Line Tools, Homebrew or the official Git installer.
+- Confirm installation with:
+
+```bash
+git --version
+```
+
+### Basic configuration to use VS Code, Conda and Git together
+
+1. Clone the repository with Git:
+
+```bash
+git clone https://github.com/griu/ai-ml-finance-hands-on.git
+cd ai-ml-finance-hands-on
+```
+
+2. Create and activate the Conda environment:
+
+```bash
+conda env create -f environment.yml
+conda activate finance_ml
+```
+
+3. Install the local pip requirements inside the activated environment:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Register the environment as a Jupyter kernel:
+
+```bash
+python -m ipykernel install --user --name finance_ml --display-name "finance_ml"
+```
+
+5. Open the project in VS Code:
+
+```bash
+code .
+```
+
+6. In VS Code:
+
+- Open a notebook from `notebooks/`
+- Select the `finance_ml` kernel when prompted
+- Run cells from top to bottom
+- Keep the terminal in the project root so relative paths work correctly
+
+7. Typical workflow:
+
+- Use **Git** to clone the repository or pull updates
+- Use **Conda** to activate the correct Python environment
+- Use **VS Code + Jupyter** to open and execute the notebooks
+
+If `code .` does not work from the terminal, open VS Code manually and use **File > Open Folder...** on the repository root.
+
+---
+
 ## Quickstart
 
 0. **Get the materials** — clone or download the repository:
@@ -34,20 +151,29 @@ No Git? Download the ZIP from the green **Code** button on GitHub and extract it
 conda env create -f environment.yml
 conda activate finance_ml
 ```
-3. Kernel publication
+3. Install the local pip requirements:
+```bash
+pip install -r requirements.txt
+```
+4. Kernel publication
 ```bash
 python -m ipykernel install --user --name finance_ml --display-name "finance_ml"
 ```
-4. Launch Jupyter **from the project root**:
+5. Launch Jupyter **from the project root**:
 ```bash
 jupyter notebook
 ```
-5. Open notebooks in order starting from `notebooks/01_python_setup_and_first_steps.ipynb`
+6. Open notebooks in order starting from `notebooks/01_python_setup_and_first_steps.ipynb`
+7. Google Colab alternative:
 
-> **Using Google Colab instead?** See the "Option 1 — Google Colab" section in
-> `docs/environment_setup.md` for how to clone the repo and run notebooks without any local installation.
+- Open [colab.research.google.com](https://colab.research.google.com)
+- Choose **File > Open notebook > GitHub**
+- Paste `https://github.com/griu/ai-ml-finance-hands-on`
+- Open `notebooks/01_python_setup_and_first_steps.ipynb` or another notebook from the repository
+- Execute the **first cell** before running any other cell
+- That first cell performs the Colab initialization: it detects Colab, clones the repository resources, installs `requirements-colab.txt`, and copies the `data/` folder next to the notebook so the rest of the notebook can resolve `data/processed`
 
-6. Torch, special case:
+8. Torch, special case:
 ```bash
 # ── Deep learning (PyTorch) ──────────────────────────────────────────────────
 # For CPU-only install (lighter, works on all platforms):
